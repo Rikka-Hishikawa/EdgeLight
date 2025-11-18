@@ -1,0 +1,42 @@
+#include <winres.h>
+#include "res.h"
+
+IDI_ICON ICON DISCARDABLE "systray.ico"
+
+IDD_OPTION DIALOG DISCARDABLE  0, 0, 18, 100
+STYLE WS_POPUP | WS_VISIBLE | WS_BORDER
+CAPTION "OPTION"
+BEGIN
+	CONTROL "", IDC_OPAQUE, "msctls_trackbar32", TBS_VERT | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 0, 0, 16, 100
+END
+
+1   VERSIONINFO MOVEABLE IMPURE LOADONCALL DISCARDABLE
+  FILEVERSION   0,0,0,1
+  PRODUCTVERSION    0,0,0,1
+  FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+  FILEFLAGS 0
+  FILEOS    VOS_DOS_WINDOWS32
+  FILETYPE  VFT_APP
+  FILESUBTYPE   0   // not used
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "041104E4"    //Block: language ID = Japanese, char set = Windows, Multilingual
+		BEGIN
+			VALUE   "CompanyName",  "‚è‚Á‚©\0"
+			VALUE   "FileDescription",  "EdgeLight\0"
+			VALUE   "FileVersion",  "0.01\0"
+			VALUE   "InternalName", "EdgeLight\0"
+			VALUE   "OriginalFilename", "EdgeLight.EXE\0"
+			VALUE   "ProductName",  "EdgeLight\0"
+			VALUE   "ProductVersion",   "0.01\0"
+			VALUE   "Comments", "EdgeLight\0"
+			VALUE   "LegalCopyright",   "(c) 2025 Rikka\0"
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE   "Translation", 0x0411, 1252
+	END
+END
+
